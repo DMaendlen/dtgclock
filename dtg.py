@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Date-Time-Group clock for usage in desaster relief operations.
 For details regarding DTG check out https://en.wikipedia.org/wiki/Date-time_group
