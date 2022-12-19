@@ -1,11 +1,6 @@
 """
 Date-Time-Group clock for usage in desaster relief operations.
 For details regarding DTG check out https://en.wikipedia.org/wiki/Date-time_group
-
-This is hard-coded to German default values (meaning timezone Alfa during normal
-time and Bravo during daylight saving time) to ensure ease of use for the
-(mostly non-technical) users.
-
 """
 
 from datetime import datetime
@@ -53,6 +48,7 @@ def get_timezone_letter(now: datetime):
 def set_time():
     """
     Create a time string for the current time in the format of %d%H%M{Timezoneletter}%b%y.
+    Then use that string to update the Tkinter label every second.
     """
     now = datetime.now()
     time = now.strftime("%d%H%M-X-%b%y")
@@ -68,7 +64,7 @@ window.geometry('495x70')
 label = Label(window,
               background='#00387b',
               foreground='white',
-              font=("lubalin graph bold", 43, 'bold'))
+              font=("Lubalin Graph Bold", 43, 'bold'))
 label.pack(anchor='center')
 set_time()
 
