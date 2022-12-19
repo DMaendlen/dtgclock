@@ -51,8 +51,8 @@ def set_time():
     Then use that string to update the Tkinter label every second.
     """
     now = datetime.now()
-    time = now.strftime("%d%H%M-X-%b%y")
-    label.config(text=time.replace('-X-', get_timezone_letter(now)).upper())
+    time = now.strftime("%d%H%M-x-%b%y").lower()
+    label.config(text=time.replace('-x-', get_timezone_letter(now)))
     label.after(1000, set_time)
 
 
